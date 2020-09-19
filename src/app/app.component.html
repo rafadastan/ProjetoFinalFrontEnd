@@ -1,34 +1,59 @@
 <div class="container"> 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		 <a class="navbar-brand" href="#">COTI Informática - Projeto Final</a> 
-			 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
 				 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
 				 <span class="navbar-toggler-icon"></span> 
-			 </button>
+			</button>
 
-		 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto"> 
 				<li class="nav-item active"> 
 					 <a class="nav-link" href="/">Página inicial <span class="sr-only">(current)</span></a>
 				</li> 
 				<li class="nav-item dropdown"> 
 					 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
-					 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Manter Fornecedores </a> 
+					 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Manter Aluno</a> 
 					 <div class="dropdown-menu" aria-labelledby="navbarDropdown"> 
-						 <a class="dropdown-item" href="#">Cadastrar novo fornecedor</a> 
-						 <a class="dropdown-item" href="#">Consultar fornecedores</a> 
+						 <a class="dropdown-item" routerLink="cadastro-aluno">Cadastrar novo aluno</a> 
+						 <a class="dropdown-item" routerLink="consulta-aluno">Consultar aluno</a> 
 					 </div> 
 				 </li>
 				<li class="nav-item dropdown">
 					 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
-					 role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Manter Produtos</a> 
+					 role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Manter Professor</a> 
 					 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						 <a class="dropdown-item" href="#">Cadastrar novo produto</a> 
-						 <a class="dropdown-item" href="#">Consultar produtos</a>
+						 <a class="dropdown-item" routerLink="cadastrar-professor">Cadastrar novo professor</a> 
+						 <a class="dropdown-item" routerLink="consultar-aluno">Consultar professor</a>
 					</div>
-				</li> 
-			</ul> 
-		 </div>
-	 </nav>
-	 <div class="jumbotron"> <h2>Sistema de Gestão Escolar</h2> <p>Projeto desenvolvido em Angular consumindo API REST</p></div>
- </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+          role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manter Turma</a> 
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="cadastrar-turma">Cadastrar novo turma</a> 
+            <a class="dropdown-item" routerLink="consultar-turma">Consultar turma</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+          role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manter Matricula</a> 
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="cadastrar-matricula">Cadastrar novo matricula</a> 
+            <a class="dropdown-item" routerLink="consultar-matricula">Consultar matricula</a>
+          </div>
+        </li> 
+		  </ul> 
+		</div>
+	</nav>
+	<div class="jumbotron">
+		<h2>Sistema de Gestão Escolar</h2>
+		<p>Projeto desenvolvido em Angular consumindo API REST</p>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<!-- Renderização dos componentes -->
+			<router-outlet></router-outlet> 
+		</div> 
+	</div>
+</div>
