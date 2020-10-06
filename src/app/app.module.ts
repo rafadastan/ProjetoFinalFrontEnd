@@ -13,8 +13,9 @@ import { ConsultarMatriculaComponent } from './consultar-matricula/consultar-mat
 import { RouterModule, Routes } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import { LoginUsuarioComponent } from './login-usuario/login-usuario.component';
 
 
 const appRoutes : Routes = [
@@ -26,8 +27,9 @@ const appRoutes : Routes = [
   {path: 'cadastrar-turma', component: CadastrarTurmaComponent},
   {path: 'consultar-turma', component: ConsultarTurmaComponent},
   {path: 'cadastrar-matricula', component: CadastrarMatriculaComponent},
-  {path: 'consultar-matricula', component: ConsultarMatriculaComponent}
-
+  {path: 'consultar-matricula', component: ConsultarMatriculaComponent},
+  { path : 'cadastro-usuario', component : CadastroUsuarioComponent }, 
+  { path : 'login-usuario', component : LoginUsuarioComponent }
 ];
 
 
@@ -41,7 +43,9 @@ const appRoutes : Routes = [
     CadastrarTurmaComponent,
     ConsultarTurmaComponent,
     CadastrarMatriculaComponent,
-    ConsultarMatriculaComponent
+    ConsultarMatriculaComponent,
+    CadastroUsuarioComponent,
+    LoginUsuarioComponent
   ],
   imports: [
     BrowserModule,
